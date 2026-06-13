@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// Student Class
+
 class Student implements Serializable {
 
     private String name;
@@ -10,7 +10,7 @@ class Student implements Serializable {
     private String grade;
     private String course;
 
-    // Constructor
+
     public Student(String name, int rollNumber, String grade, String course) {
         this.name = name;
         this.rollNumber = rollNumber;
@@ -18,7 +18,7 @@ class Student implements Serializable {
         this.course = course;
     }
 
-    // Getters
+
     public String getName() {
         return name;
     }
@@ -35,7 +35,7 @@ class Student implements Serializable {
         return course;
     }
 
-    // Setters
+  
     public void setName(String name) {
         this.name = name;
     }
@@ -48,7 +48,7 @@ class Student implements Serializable {
         this.course = course;
     }
 
-    // Display Student Details
+   
     @Override
     public String toString() {
 
@@ -61,13 +61,13 @@ class Student implements Serializable {
     }
 }
 
-// Main Class
+
 public class studentmanagementsystem {
 
     static ArrayList<Student> students = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
-    // Add Student
+
     public static void addStudent() {
 
         System.out.print("Enter Student Name: ");
@@ -113,7 +113,7 @@ public class studentmanagementsystem {
         System.out.println("Student Added Successfully!");
     }
 
-    // Display Students
+
     public static void displayStudents() {
 
         if (students.isEmpty()) {
@@ -128,7 +128,7 @@ public class studentmanagementsystem {
         }
     }
 
-    // Search Student
+  
     public static void searchStudent() {
 
         int rollNumber;
@@ -156,7 +156,7 @@ public class studentmanagementsystem {
         System.out.println("Student Not Found.");
     }
 
-    //Remove Student
+ 
     public static void removeStudent() {
 
         int rollNumber;
@@ -185,7 +185,7 @@ public class studentmanagementsystem {
         System.out.println("Student Not Found.");
     }
 
-    // Edit Student
+
     public static void editStudent() {
 
         int rollNumber;
@@ -233,7 +233,7 @@ public class studentmanagementsystem {
         System.out.println("Student Not Found.");
     }
 
-    // Save Data
+ 
     public static void saveData() {
 
         try {
@@ -278,7 +278,6 @@ public class studentmanagementsystem {
         }
     }
 
-    // Main Method
     public static void main(String[] args) {
 
         loadData();

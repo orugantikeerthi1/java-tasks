@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
-// Bank Account Class
+
 class BankAccount {
     private double balance;
 
-    // Constructor
+    
     public BankAccount(double initialBalance) {
         balance = initialBalance;
     }
 
-    // Deposit Method
+   
     public void deposit(double amount) {
         balance += amount;
         System.out.println(" Deposit successful!");
     }
 
-    // Withdraw Method
+    
     public boolean withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
@@ -27,24 +27,24 @@ class BankAccount {
         }
     }
 
-    // Check Balance Method
+   
     public double getBalance() {
         return balance;
     }
 }
 
-// ATM Class
+
 class ATM {
     private BankAccount account;
     private Scanner sc;
 
-    // Constructor
+    
     public ATM(BankAccount account) {
         this.account = account;
         sc = new Scanner(System.in);
     }
 
-    // Display ATM Menu
+    
     public void showMenu() {
         int choice;
 
@@ -83,12 +83,12 @@ class ATM {
         } while (choice != 4);
     }
 
-    // Check Balance
+   
     private void checkBalance() {
         System.out.println(" Current Balance: ₹" + account.getBalance());
     }
 
-    // Deposit Money
+    
     private void depositMoney() {
         System.out.print("Enter amount to deposit: ₹");
         double amount = sc.nextDouble();
@@ -101,7 +101,7 @@ class ATM {
         }
     }
 
-    // Withdraw Money
+    
     private void withdrawMoney() {
         System.out.print("Enter amount to withdraw: ₹");
         double amount = sc.nextDouble();
@@ -115,17 +115,17 @@ class ATM {
     }
 }
 
-// Main Class
+
 public class atmmachine {
     public static void main(String[] args) {
 
-        // Create bank account with initial balance
+        
         BankAccount userAccount = new BankAccount(5000);
 
-        // Create ATM object
+        
         ATM atm = new ATM(userAccount);
 
-        // Start ATM system
+    
         atm.showMenu();
     }
 }
